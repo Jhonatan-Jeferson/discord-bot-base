@@ -1,0 +1,27 @@
+[project]
+name = "discord-bot-base"
+version = "0.1.0"
+description = "Este projeto tem o único e exclusivo propósito de servir de base a classe bot do discord-py + comando de ajuda personalizado para meus bots."
+authors = [
+    {name = "Jhonatan Jeferson", email = "jhonatanjefersonoliveira@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "discord-py (>=2.6.3,<3.0.0)"
+]
+
+[project.scripts]
+create-bot = "discord_bot_base.cli.structurize:main"
+
+
+[tool.poetry]
+packages = [{include = "discord_bot_base", from = "src"}]
+
+
+[tool.poetry.group.dev.dependencies]
+python-dotenv = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
